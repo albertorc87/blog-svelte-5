@@ -5,6 +5,4 @@ import type { PageData } from './$types';
 	let { data }: { data: PageData } = $props();
 </script>
 
-{#each data.posts as post}
-	<Article {post} />
-{/each}
+<Article post={data.post} />

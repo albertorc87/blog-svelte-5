@@ -12,3 +12,18 @@
 body {
     font-family: "Open Sans", sans-serif;
 }
+
+a {
+    color: #347cbb;
+}
+
+a:hover {
+    color: #FFAA00;
+}
+
+
+.main-container {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}

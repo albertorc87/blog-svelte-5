@@ -5,4 +5,7 @@
 </script>
 
 <Header />
+
+<main class="main-container">
 {@render children()}
+</main>
