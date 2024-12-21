@@ -12,6 +12,7 @@ export const usersTable = pgTable("users", {
     }).defaultNow().notNull(),
     isActive: boolean("is_active").default(true).notNull(),
     isAdmin: boolean("is_admin").default(false).notNull(),
+    avatar: varchar('avatar', { length: 255 }),
 });
 
 export const sessionsTable = pgTable("sessions", {
