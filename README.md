@@ -8,7 +8,9 @@ En este tutorial con Svelte 5 y SvelteKit aprenderás a desarrollar un blog full
 
 [Parte 3: Configura PostgreSQL con Drizzle ORM en SvelteKit: Base de datos del blog](https://cosasdedevs.com/posts/postgresql-drizzle-orm-sveltekit/)
 
-[Parte 4: Cargar posts en la página de inicio y detalle del post con Svelte 5 y Sveltekit](https://cosasdedevs.com/posts/cargar-posts-pagina-inicio-detalle-post-svelte-5-sveltekit/)
+[Parte 4.1: Cargar posts en la página de inicio y detalle del post con Svelte 5 y Sveltekit](https://cosasdedevs.com/posts/parte-1-cargar-posts-pagina-inicio-detalle-post-svelte-5-sveltekit/)
+
+[Parte 4.2: Cargar posts en la página de inicio y detalle del post con Svelte 5 y Sveltekit](https://cosasdedevs.com/posts/parte-2-cargar-posts-pagina-inicio-detalle-post-svelte-5-sveltekit/)
 
 Parte 5: En construcción 👷
 
