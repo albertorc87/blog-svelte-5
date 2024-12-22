@@ -21,14 +21,11 @@ a:hover {
     color: #FFAA00;
 }
 
-
 .main-container {
     max-width: 800px;
     margin: 0 auto;
     text-align: center;
 }
-
-
 	
 .post {
     padding: 0 1rem;
