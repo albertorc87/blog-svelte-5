@@ -12,3 +12,42 @@
 body {
     font-family: "Open Sans", sans-serif;
 }
+
+a {
+    color: #347cbb;
+}
+
+a:hover {
+    color: #FFAA00;
+}
+
+.main-container {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+	
+.post {
+    padding: 0 1rem;
+}
+
+.image-post img {
+    max-width: 100%;
+    object-fit: cover;
+}
+
+.content-post {
+    margin: 1rem 0;
+    max-width: 750px;
+    text-align: justify;
+    padding: 0 1rem;
+}
+
+.content-post p {
+    margin-bottom: 1rem;
+}
+
+.separator {
+    border-bottom: 1px solid #9d9d9d;
+    margin: 1rem 0;
+}

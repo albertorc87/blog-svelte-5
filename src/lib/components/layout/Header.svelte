@@ -32,7 +32,9 @@
 		<a href="/">
 			<img id="image-header" src={HeaderImg} alt="Cabecera cosasdedevs" />
 		</a>
-		<h1>Artítulos y tutoriales del mundo tech</h1>
+		{#if $page.url.pathname === '/'}
+			<h1>Artítulos y tutoriales del mundo tech</h1>
+		{/if}
 	</div>
 </header>
 
