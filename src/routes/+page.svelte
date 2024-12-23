@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { ArticleMain } from '$components';
-	import type { PostWithUser } from '$lib/server/db/posts';
+	import type { PostWithUser } from '$lib/server/db/db-posts';
 	import { onMount } from 'svelte';
 	import type { PageData } from './$types';
 
@@ -104,7 +104,7 @@
 <div id="load-more" class="load-more-posts"></div>
 
 {#if !hasMorePosts}
-<div class="message-no-posts">No hay más artículos</div>
+	<div class="message-no-posts">No hay más artículos</div>
 {/if}
 
 <style>
@@ -130,7 +130,8 @@
 	}
 
 	.load-more-posts {
-		height: 1px;margin-bottom:1rem;
+		height: 1px;
+		margin-bottom: 1rem;
 	}
 
 	.message-no-posts {

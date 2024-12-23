@@ -3,6 +3,12 @@
 	import Logo from '$assets/logo.png';
 	import HeaderImg from '$assets/header.png';
 	import { page } from '$app/stores';
+
+	interface HeaderProps {
+		username?: string;
+	}
+
+	let { username }: HeaderProps = $props();
 </script>
 
 <header>
@@ -20,10 +26,24 @@
 					<li class:border-navbar={$page.url.pathname === '/contacto'}>
 						<a href="/contacto">Contacto</a>
 					</li>
-					<li class:border-navbar={$page.url.pathname === '/login'}><a href="/login">Login</a></li>
-					<li class:border-navbar={$page.url.pathname === '/registro'}>
-						<a href="/registro">Registro</a>
-					</li>
+
+					{#if username}
+						<li class:border-navbar={$page.url.pathname === '/mi-cuenta'}>
+							<a href="/">Hola, {username}</a>
+						</li>
+						<li class:border-navbar={$page.url.pathname === '/logout'}>
+							<form action="/logout" method="post">
+								<button>Logout</button>
+							</form>
+						</li>
+					{:else}
+						<li class:border-navbar={$page.url.pathname === '/login'}>
+							<a href="/login">Login</a>
+						</li>
+						<li class:border-navbar={$page.url.pathname === '/registro'}>
+							<a href="/registro">Registro</a>
+						</li>
+					{/if}
 				</ul>
 			</nav>
 		</div>
@@ -110,6 +130,23 @@
 	}
 
 	.menu .navbar ul li a:hover {
+		color: #0f0f0f;
+	}
+
+	.menu .navbar ul li form button {
+		font-size: 18px;
+		padding: 20px;
+		color: white;
+		border: none;
+		background: none;
+		display: block;
+		font-weight: bold;
+		transition: 0.3s;
+		cursor: pointer;
+		font-family: 'Open Sans', sans-serif;
+	}
+
+	.menu .navbar ul li form button:hover {
 		color: #0f0f0f;
 	}
 

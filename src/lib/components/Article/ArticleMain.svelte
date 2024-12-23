@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { ArticleFooter } from '$components';
-	import type { PostWithUser } from '$lib/server/db/posts';
+	import type { PostWithUser } from '$lib/server/db/db-posts';
 
 	let { post }: { post: PostWithUser } = $props();
 </script>
