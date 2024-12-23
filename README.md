@@ -12,7 +12,9 @@ En este tutorial con Svelte 5 y SvelteKit aprenderás a desarrollar un blog full
 
 [Parte 4.2: Cargar posts en la página de inicio y detalle del post con Svelte 5 y Sveltekit](https://cosasdedevs.com/posts/parte-2-cargar-posts-pagina-inicio-detalle-post-svelte-5-sveltekit/)
 
-Parte 5: En construcción 👷
+[Parte 5: Autenticación en Svelte 5 y SvelteKit: Crea un Login y gestión de sesión con Lucia-Auth](https://cosasdedevs.com/posts/autenticacion-svelte-5-sveltekit-login-gestion-sesion-lucia-auth/)
+
+Parte 6: En construcción 👷
 
 ## Desarrollo
 

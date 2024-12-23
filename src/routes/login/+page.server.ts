@@ -31,6 +31,13 @@ export const actions = {
 		try {
 			const user = await getUserByEmailAndPassword(email, password);
 
+			if (!user.isActive) {
+				return fail(400, {
+					error:
+						'Tu usuario ha sido bloqueado, por favor ponte en contacto con administración para obtener más detalles'
+				});
+			}
+
 			const token = await generateSessionToken();
 			const dataSession = await createSession(token, user.id);
 
