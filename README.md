@@ -14,7 +14,9 @@ En este tutorial con Svelte 5 y SvelteKit aprenderás a desarrollar un blog full
 
 [Parte 5: Autenticación en Svelte 5 y SvelteKit: Crea un Login y gestión de sesión con Lucia-Auth](https://cosasdedevs.com/posts/autenticacion-svelte-5-sveltekit-login-gestion-sesion-lucia-auth/)
 
-Parte 6: En construcción 👷
+[Parte 6: Página de registro de nuestro blog con Svelte 5 y SvelteKit](https://cosasdedevs.com/posts/pagina-registro-blog-svelte-5-sveltekit/)
+
+Parte 7: En construcción 👷
 
 ## Desarrollo
 
