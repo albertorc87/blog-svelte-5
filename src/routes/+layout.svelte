@@ -3,9 +3,8 @@
 	import { Header } from '$components';
 	import type { Snippet } from 'svelte';
 	import '../app.css';
-	import type { LayoutData } from './$types';
 
-	let { data, children }: { data: LayoutData; children: Snippet } = $props();
+	let { children }: { children: Snippet } = $props();
 
 	const username = $page.data.layoutData.username;
 </script>

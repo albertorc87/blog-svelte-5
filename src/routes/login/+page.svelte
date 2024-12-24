@@ -2,9 +2,9 @@
 	import { Button } from '$components';
 	import MessageError from '$components/MessageError.svelte';
 
-	import type { PageData, ActionData } from './$types';
+	import type { ActionData } from './$types';
 
-	let { form }: { data: PageData; form: ActionData } = $props();
+	let { form }: { form: ActionData } = $props();
 
 	let email: string = $state('');
 	let password: string = $state('');
