@@ -8,6 +8,7 @@ import {
 	setSessionTokenCookie,
 	validateSessionToken
 } from '$lib/server/db/auth';
+import { convertToString } from '$lib/utils/form-utils';
 
 export const load: PageServerLoad = async ({ cookies }) => {
 	const infoSession = await validateSessionToken(cookies.get(sessionCookieName));
@@ -48,7 +49,3 @@ export const actions = {
 		}
 	}
 } satisfies Actions;
-
-function convertToString(value: FormDataEntryValue | null): string {
-	return value ? value.toString() : '';
-}

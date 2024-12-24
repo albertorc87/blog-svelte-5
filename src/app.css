@@ -51,3 +51,30 @@ a:hover {
 	border-bottom: 1px solid #9d9d9d;
 	margin: 1rem 0;
 }
+
+.form-auth {
+	max-width: 400px;
+	margin: 0 auto;
+	padding: 1rem;
+}
+
+.form-auth div {
+	display: flex;
+	flex-direction: column;
+}
+
+.form-auth label {
+	text-align: left;
+	width: 100%;
+	margin-bottom: 0.5rem;
+}
+
+.form-auth input {
+	font-size: 1.2rem;
+	width: 100%;
+	padding: 0.5rem;
+	border-radius: 5px;
+	border: 1px solid #999999;
+	background-color: #f0f0f0;
+	margin-bottom: 1rem;
+}
