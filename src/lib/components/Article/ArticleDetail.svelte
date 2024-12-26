@@ -1,7 +1,13 @@
 <script lang="ts">
-	import { ArticleFooter } from '$components';
+	import { ArticleFooter, Comments } from '$components';
 	import type { PostWithUser } from '$lib/server/db/db-posts';
-	let { post }: { post: PostWithUser } = $props();
+
+	interface ArticleDetailProps {
+		post: PostWithUser;
+		username: string | undefined;
+	}
+
+	let { post, username }: ArticleDetailProps = $props();
 </script>
 
 <article class="post">
@@ -22,6 +28,7 @@
 		avatar={post.avatar}
 	/>
 </article>
+<Comments postId={post.id} {username}/>
 
 <style>
 	.title-post h1 {

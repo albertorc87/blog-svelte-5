@@ -4,7 +4,7 @@ import { db } from './db';
 
 export type PostWithUser = Pick<
 	InferSelectModel<typeof postsTable>,
-	'title' | 'content' | 'createdAt' | 'imageHeader' | 'slugUrl'
+	'id' | 'title' | 'content' | 'createdAt' | 'imageHeader' | 'slugUrl'
 > & {
 	username: string;
 	avatar: string | null;
@@ -13,6 +13,7 @@ export type PostWithUser = Pick<
 export async function getPostBySlugUrl(slugUrl: string): Promise<PostWithUser | undefined> {
 	const result = await db
 		.select({
+			id: postsTable.id,
 			title: postsTable.title,
 			content: postsTable.content,
 			createdAt: postsTable.createdAt,
@@ -31,6 +32,7 @@ export async function getPostBySlugUrl(slugUrl: string): Promise<PostWithUser | 
 export async function getPosts(limit: number = 5, offset: number = 0): Promise<PostWithUser[]> {
 	return await db
 		.select({
+			id: postsTable.id,
 			title: postsTable.title,
 			content: postsTable.content,
 			createdAt: postsTable.createdAt,

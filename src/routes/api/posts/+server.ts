@@ -1,10 +1,10 @@
-import { json } from '@sveltejs/kit';
-import type { RequestHandler } from './$types';
+import { json, type RequestHandler } from '@sveltejs/kit';
 import { getPosts } from '$lib/server/db/db-posts';
 import { getFirstParagraph } from '$lib/utils/html';
 
-export const POST: RequestHandler = async ({ request }) => {
-	const { offset } = await request.json();
+export const GET: RequestHandler = async ({ url }) => {
+	
+    const offset: number = Number(url.searchParams.get('offset') || 0);
 
 	if (typeof offset !== 'number' || offset < 0) {
 		return json(
