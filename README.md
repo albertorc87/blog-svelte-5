@@ -16,9 +16,9 @@ En este tutorial con Svelte 5 y SvelteKit aprenderás a desarrollar un blog full
 
 [Parte 6: Página de registro de nuestro blog con Svelte 5 y SvelteKit](https://cosasdedevs.com/posts/pagina-registro-blog-svelte-5-sveltekit/)
 
-[Parte 1: Crear comentarios en nuestro blog de Svelte 5 y Sveltkit y optimizaciones](https://cosasdedevs.com/posts/parte-1-crear-comentarios-blog-svelte-5-sveltkit-optimizaciones/)
+[Parte 7.1: Crear comentarios en nuestro blog de Svelte 5 y Sveltkit y optimizaciones](https://cosasdedevs.com/posts/parte-1-crear-comentarios-blog-svelte-5-sveltkit-optimizaciones/)
 
-[Parte 2: Crear comentarios en nuestro blog de Svelte 5 y Sveltkit y optimizaciones](https://cosasdedevs.com/posts/parte-2-crear-comentarios-blog-svelte-5-sveltkit-optimizaciones/)
+[Parte 7.2: Crear comentarios en nuestro blog de Svelte 5 y Sveltkit y optimizaciones](https://cosasdedevs.com/posts/parte-2-crear-comentarios-blog-svelte-5-sveltkit-optimizaciones/)
 
 Parte 8: En construcción 👷
 
