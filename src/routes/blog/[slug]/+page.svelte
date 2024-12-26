@@ -2,7 +2,11 @@
 	import { ArticleDetail } from '$components';
 	import type { PageData } from './$types';
 
-	let { data }: { data: PageData } = $props();
+	interface BlogDetailProps {
+		data: PageData;
+	}
+
+	let { data }: BlogDetailProps = $props();
 </script>
 
-<ArticleDetail post={data.post} />
+<ArticleDetail post={data.post} username={data.username}/>

@@ -1,8 +1,10 @@
 <script lang="ts">
-	import { ArticleMain } from '$components';
+	import { page } from '$app/stores';
+	import { ArticleMain, Snipper } from '$components';
 	import type { PostWithUser } from '$lib/server/db/db-posts';
 	import { onMount } from 'svelte';
 	import type { PageData } from './$types';
+	import { loadPaginateData } from '$lib/utils/fecth-api-data';
 
 	let { data }: { data: PageData } = $props();
 
@@ -19,7 +21,7 @@
 		isLoading = true;
 		offset += 5;
 		try {
-			const response = await fetchPosts(offset);
+			const response = await loadPaginateData(offset, `${$page.url.origin}/api/posts`);
 
 			if (response.status === 200) {
 				const responsePost = await response.json();
@@ -49,31 +51,6 @@
 		isLoading = false;
 	}
 
-	async function fetchPosts(offset: number): Promise<Response> {
-		return new Promise((resolve, reject) => {
-			setTimeout(async () => {
-				try {
-					const response = await fetch('/api/blog', {
-						method: 'POST',
-						headers: {
-							Accept: 'application/json',
-							'Content-Type': 'application/json'
-						},
-						body: JSON.stringify({ offset })
-					});
-
-					if (response.ok) {
-						resolve(response);
-					} else {
-						reject(new Error(`Failed with status: ${response.status}`));
-					}
-				} catch (err) {
-					reject(err);
-				}
-			}, 2000);
-		});
-	}
-
 	onMount(() => {
 		const observer = new IntersectionObserver(
 			(entries) => {
@@ -96,9 +73,7 @@
 {/each}
 
 {#if isLoading}
-	<div class="loading">
-		<div class="spinner"></div>
-	</div>
+	<Snipper />
 {/if}
 
 <div id="load-more" class="load-more-posts"></div>
@@ -108,27 +83,6 @@
 {/if}
 
 <style>
-	.loading {
-		text-align: center;
-		padding: 1rem;
-	}
-
-	.spinner {
-		width: 30px;
-		height: 30px;
-		border: 4px solid #ccc;
-		border-top-color: #3498db;
-		border-radius: 50%;
-		animation: spin 1s linear infinite;
-		margin: 0 auto;
-	}
-
-	@keyframes spin {
-		to {
-			transform: rotate(360deg);
-		}
-	}
-
 	.load-more-posts {
 		height: 1px;
 		margin-bottom: 1rem;
